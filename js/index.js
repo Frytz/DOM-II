@@ -72,25 +72,25 @@ var dragged;
 document.addEventListener("drag", function(event) {
 
 }, false);
-
+// (8)
 document.addEventListener("dragstart", function(event) {
   // store a ref. on the dragged elem
   dragged = event.target;
   // make it half transparent
   event.target.style.opacity = .5;
 }, false);
-
+//(9)
 document.addEventListener("dragend", function(event) {
   // reset the transparency
   event.target.style.opacity = "";
 }, false);
-
+(10)
 /* events fired on the drop targets */
 document.addEventListener("dragover", function(event) {
   // prevent default to allow drop
   event.preventDefault();
 }, false);
-
+//(11)
 document.addEventListener("dragenter", function(event) {
   // highlight potential drop target when the draggable element enters it
   if (event.target.className == "dropzone") {
@@ -98,7 +98,7 @@ document.addEventListener("dragenter", function(event) {
   }
 
 }, false);
-
+//(12)
 document.addEventListener("dragleave", function(event) {
   // reset background of potential drop target when the draggable element leaves it
   if (event.target.className == "dropzone") {
@@ -106,7 +106,7 @@ document.addEventListener("dragleave", function(event) {
   }
 
 }, false);
-
+(13)
 document.addEventListener("drop", function(event) {
   // prevent default action (open as link for some elements)
   event.preventDefault();
@@ -117,6 +117,11 @@ document.addEventListener("drop", function(event) {
     event.target.appendChild( dragged );
   }
 }, false);
+
+
+
+
+
 
 
   //form popup
