@@ -49,6 +49,14 @@
         <img src="img/adventure.jpg" alt="Let's go on an adventure!">
       </div>
     </section>
+    <div class="dropzone"> 
+      <div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"> 
+        Drag me
+      </div> 
+    </div> 
+    <div class="dropzone"></div>
+    <div class="dropzone"></div> 
+    <div class="dropzone"></div>
     <section class="content-section inverse-content">
       <div class="img-content">
           <img src="img/fun.jpg" class="img-fluid rounded" alt="Lets have fun!">
@@ -92,9 +100,11 @@
                 &times;
             </a><!--closes a child-->
             <form action="/"><!--opens form-->
-            <h2>
+            <div id="mydivheader">
+              <h2>
                 Fun In The Sun
             </h2>
+            </div>
             <div><!--opens third div child-->
                 <div class="name">
                   <h6> Full Name</h6>
@@ -107,9 +117,6 @@
                 <input type="text" name="name" placeholder="Phone number">
                 <input type="text" name="name" placeholder="City, State">
             </div><!--closes third div child-->
-                <span>
-                    Message
-                </span>
                 <div><!--opens text div div-->
                     <textarea rows="4">
                     </textarea>
@@ -119,7 +126,9 @@
         </div><!--closes second child-->
     </div><!--closes first child-->
 </div><!--closes parent-->
-  <footer class="footer">
+   
+
+<footer class="footer">
     <div class="container footer-cotainer">
     <p>Copyright Fun Bus 2018</p>
     </div>
